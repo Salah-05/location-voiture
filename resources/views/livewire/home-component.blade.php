@@ -1,15 +1,20 @@
-<div>
+    <!-- Banners -->
+<section id="banner" class="banner-section">
     <div class="container">
-        <div class="welcome-hero-txt">
-            <h2>Louez la voiture de vos rêves dès aujourd'hui!</h2>
-            <p>
-                Découvrez notre large sélection de voitures de location.
-                Trouvez la voiture parfaite pour votre prochain voyage.
-                Profitez de nos tarifs compétitifs sur la location de voitures. 
-            </p>
-            <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
+      <div class="div_zindex">
+        <div class="row">
+          <div class="col-md-5 col-md-push-7">
+            <div class="banner_content">
+              <h1>Find the right car for you.</h1>
+              <p>We have more than a thousand cars for you to choose. </p>
+              <a href="#" class="btn1">Read More <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></div>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
+  <!-- /Banners --> 
+  
 
     <div class="container">
         <div class="row">

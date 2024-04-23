@@ -56,6 +56,7 @@
 
 		<header>
 			<div class="default-header">
+				<div class="headerproblem">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-3 col-md-2">
@@ -68,12 +69,12 @@
 								<div class="header_widgets">
 									<div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
 									<p class="uppercase_text">For Support Mail us : </p>
-									<a href="mailto:info@example.com">codeprojectsorg@gmail.com</a>
+									<small href="mailto:info@example.com">salah-location@gmail.com</small>
 								</div>
 								<div class="header_widgets">
 									<div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-									<p class="uppercase_text">Service Helpline Call Us: </p>
-									<a href="tel:61-1234-5678-09">+91-9876543210</a>
+									<p class="uppercase_text">Service Helpline : </p>
+									<small href="tel:61-1234-5678-09">+212-761834923</small>
 								</div>
 								<div class="social-follow">
 									<ul>
@@ -85,12 +86,21 @@
 									</ul>
 								</div>
 								<div class="login_btn">
-									<a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a>
+									@auth
+									{{-- <a href="{{route('logout')}}" >Logout</a> --}}
+									<form method="POST" action="{{route('logout')}}">
+										@csrf
+										<a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">Sign Out</a>
+									</form>
+									@else
+									<a href="{{route('login')}}" >Login / register</a>
+									@endif
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			    </div>
 			</div>
 		
 			<!-- Navigation -->
@@ -103,18 +113,37 @@
 					</div>
 					<div class="header_wrap">
 						<div class="user_login">
+							@auth
 							<ul>
-								<li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> Username <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+								<li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="dropdown-menu">
-										<li><a href="profile.php">Profile Settings</a></li>
+										<li><a href="{{route('profile.edit')}}">Profile Settings</a></li>
+										<li><a href="{{route('profile.edit')}}">Update Password</a></li>
+										<li><a href="my-booking.php">My Booking</a></li>
+										<li><a href="post-testimonial.php">Post a Testimonial</a></li>
+										<li><a href="my-testimonials.php">My Testimonial</a></li>
+										<li><form method="POST" action="{{route('logout')}}">
+											@csrf
+											<a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">Sign Out</a>
+										</form>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							@else
+							<ul>
+								<li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									{{-- <ul class="dropdown-menu">
+										<li><a href="{{route('profile.edit')}}">Profile Settings</a></li>
 										<li><a href="update-password.php">Update Password</a></li>
 										<li><a href="my-booking.php">My Booking</a></li>
 										<li><a href="post-testimonial.php">Post a Testimonial</a></li>
 										<li><a href="my-testimonials.php">My Testimonial</a></li>
 										<li><a href="logout.php">Sign Out</a></li>
-									</ul>
+									</ul> --}}
 								</li>
 							</ul>
+							@endif
 						</div>
 						<div class="header_search">
 							<div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
@@ -141,54 +170,7 @@
 		
 		
 		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero">
-		{{-- top-area Start  --}}
-
-			{{-- <div class="top-area">
-				<div class="header-area">
-					<!-- Start Navigation -->
-				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-				        <div class="container">
-
-				            <!-- Start Header Navigation -->
-				            <div class="navbar-header">
-				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-				                    <i class="fa fa-bars"></i>
-				                </button>
-				                <a class="navbar-brand" href="index.html">Primax <span></span></a>
-
-				            </div><!--/.navbar-header-->
-				            <!-- End Header Navigation -->
-
-				            <!-- Collect the nav links, forms, and other content for toggling -->
-				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">home</a></li>
-				                    <li class="scroll"><a href="#service">service</a></li>
-				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
-				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
-				                    <li class="scroll"><a href="#brand">brands</a></li>
-				                    <li class="scroll"><a href="#contact">contact</a></li>
-									{{-- <li class="scroll"><a href="#contact">My account</a></li> --}}
-                                    {{-- <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Profile</a></li>
-                                            <li><a href="#">Settings</a></li>
-                                            <li><a href="#">Logout</a></li>
-                                        </ul>
-                                    </li>
-				                </ul><!--/.nav -->
-				            </div><!-- /.navbar-collapse -->
-				        </div><!--/.container-->
-				    </nav><!--/nav-->
-				    <!-- End Navigation -->
-				</div><!--/.header-area -->
-			    <div class="clearfix"></div>
-
-			</div><!-- /.top-area--> --}} 
-			<!-- top-area End -->
+		{{-- <section id="home" class="welcome-hero"> --}}
 			{{$slot}}
 		<!--contact start-->
 		<footer id="contact"  class="contact">
