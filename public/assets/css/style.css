@@ -45,7 +45,7 @@ body{
 	font-size:16px;
 	color:#818998;
     text-transform:initial;
-    margin:0 auto;
+    margin:600px auto 0;
 	overflow-x:hidden;
 }
 
@@ -477,7 +477,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
 .login_btn a:hover {
     background-color: #b30000; /* Couleur de fond au survol */
 }
-  
 /*----------------------------------
       2.1 Navigation & Dropdown Menu
   ------------------------------------------*/
@@ -487,7 +486,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
     padding: 0;
     padding-top: 2px;
     position: fixed;
-    top: 70px;
+    top: 65px;
     width: 100%;
     z-index: 1000; /* Assurez-vous que le z-index est supérieur à tout autre élément pour qu'il soit visible */
   }
@@ -1419,10 +1418,10 @@ blockquote {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 9%;
-    height: 600px;
+    margin-top: 0;
+    height:600px ;
     width: 100%;
-    /* z-index: 1;  */
+    z-index: 1;
   }
 
 
@@ -1486,6 +1485,136 @@ blockquote {
     display: none; /* Cacher la flèche */
 }
 
+
+
+/* Formulaire de connexion */
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+} 
+
+/* Conteneur principal */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /*min-height: 400px;*/ /* Augmentez la hauteur minimale de la page */
+}
+
+.login-form {
+    padding: 40px;
+    background-color: #fff;
+    /* order: 2; Place le formulaire en dernier */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 50px;
+}
+
+.login-form .titre-login {
+    margin-bottom: 20px;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #0b71d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-left: 50px; */
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.login-form a {
+    text-decoration: none;
+    color: #075dc7;
+    font-size: 1em;
+    margin-left: 30%;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Image de connexion */
+.login-image {
+    flex: 1;
+    padding: 0px;
+    order: 1; /* Place l'image en premier */
+}
+
+.login-image img {
+    max-width: 800px;
+    min-height: 500px;
+    /* height: auto; */
+    border-radius: 5px;
+}
+
+/* Ligne horizontale */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Bouton "Créer un compte" */
+.text-center a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6bd50f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: auto;
+}
+
+.text-center a:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .login-form,
+    .login-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* END of Formulaire de connexion */
 
 
 
