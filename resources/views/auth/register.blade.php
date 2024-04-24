@@ -1,4 +1,9 @@
-<x-guest-layout>
+<x-app-layout>
+<div class="container-login">
+    <div class="login-form">
+    <div class="titre-login">
+        <h2>Hello ,Welcome to Car Rental</h2>
+    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -40,13 +45,18 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
             <x-primary-button class="ml-4">
                 {{ __('Register') }}
             </x-primary-button>
+            <hr class="mt-6 mb-6">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
         </div>
     </form>
-</x-guest-layout>
+</div>
+                <div class="login-image">
+                      <img src="{{ asset('assets/images/login-image.jpg') }}" alt="Image"/>
+                </div>
+</div>
+</x-app-layout>
