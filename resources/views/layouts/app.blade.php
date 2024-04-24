@@ -53,7 +53,7 @@
 	
 	<body>
 		
-
+    <div class="main-content">
 		<header>
 			<div class="default-header">
 				<div class="headerproblem">
@@ -155,9 +155,9 @@
 					</div>
 					<div class="collapse navbar-collapse" id="navigation">
 						<ul class="nav navbar-nav">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="page.php?type=aboutus">About Us</a></li>
-							<li><a href="car-listing.php">Car Listing</a></li>
+							<li><a href="{{route('home.index')}}">Home</a></li>
+							<li><a href="{{route('user.dashboard')}}">About Us</a></li>
+							<li><a href="{{route('profile.edit')}}">Car Listing</a></li>
 							<li><a href="page.php?type=faqs">FAQs</a></li>
 							<li><a href="contact-us.php">Contact Us</a></li>
 						</ul>
@@ -165,13 +165,15 @@
 				</div>
 			</nav>
 			<!-- Navigation end -->
-		
+			
 		</header>
-		
+	</div>
 		
 		<!--welcome-hero start -->
 		{{-- <section id="home" class="welcome-hero"> --}}
-			{{$slot}}
+			
+				{{$slot}}
+
 		<!--contact start-->
 		<footer id="contact"  class="contact">
 			<div class="container">
@@ -180,14 +182,14 @@
 						<div class="col-md-3 col-sm-6">
 							<div class="single-footer-widget">
 								<div class="footer-logo">
-									<a href="index.html">carvilla</a>
+									<a href="index.html">Online Car Rental</a>
 								</div>
 								<p>
 									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
 								</p>
 								<div class="footer-contact">
-									<p>info@themesine.com</p>
-									<p>+1 (885) 2563154554</p>
+									<p>salaheddine@gmail.com</p>
+									<p>+212 (885) 761834923</p>
 								</div>
 							</div>
 						</div>
@@ -253,7 +255,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<p>
-								&copy; copyright.designed and developed by <a href="{{asset('https://www.themesine.com/')}}">themesine</a>.
+								&copy; copyright.designed and developed by <a href="{{asset('https://www.themesine.com/')}}">Salaheddine Tech</a>.
 							</p><!--/p-->
 						</div>
 						<div class="col-sm-6">
@@ -300,6 +302,36 @@
 		<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')}}"></script>
         <!--Custom JS-->
         <script src="{{asset('assets/js/custom.js')}}"></script>
+		{{-- <script>document.addEventListener("DOMContentLoaded", function() {
+			var headerHeight = document.querySelector('.default-header').offsetHeight;
+			document.body.style.marginTop = headerHeight + 'px';
+		});
+		</script> --}}
+
+		<script>
+			// Attend que le document soit prêt
+			document.addEventListener("DOMContentLoaded", function() {
+				// Obtient la hauteur du header
+				var headerHeight = document.querySelector('.default-header').offsetHeight;
+				// Sélectionne le contenu principal
+				var mainContent = document.querySelector('.main-content');
+				// Ajuste la marge supérieure du contenu principal en fonction de la hauteur du header
+				mainContent.style.marginTop = headerHeight + 'px';
+			});
+		</script>
+
+
+        <script>
+			document.addEventListener("DOMContentLoaded", function() {
+    var headerHeight = document.querySelector('.default-header').offsetHeight;
+    var mainContent = document.querySelector('.main-content');
+    var extraMargin = 80; // Ajustez cette valeur en fonction de votre conception
+    mainContent.style.marginTop = (headerHeight + extraMargin) + 'px';
+});
+
+		</script>
+
+
         @livewireScripts
         
     </body>
