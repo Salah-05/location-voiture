@@ -43,6 +43,9 @@
         
         <!--style.css-->
         <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+
+		 <!--main.css-->
+		 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
         
         <!--responsive.css-->
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
@@ -68,12 +71,12 @@
 							<div class="header_info">
 								<div class="header_widgets">
 									<div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-									<p class="uppercase_text">For Support Mail us : </p>
+									<p class="uppercase_text">For Support Mail us</p>
 									<small href="mailto:info@example.com">salah-location@gmail.com</small>
 								</div>
 								<div class="header_widgets">
 									<div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-									<p class="uppercase_text">Service Helpline : </p>
+									<p class="uppercase_text">Service Helpline</p>
 									<small href="tel:61-1234-5678-09">+212-761834923</small>
 								</div>
 								<div class="social-follow">
@@ -146,7 +149,9 @@
 							@endif
 						</div>
 						<div class="header_search">
-							<div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
+							<div id="search_toggle">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
 							<form action="#" method="get" id="header-search-form">
 								<input type="text" placeholder="Search..." class="form-control">
 								<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -158,7 +163,7 @@
 							<li><a href="{{route('home.index')}}">Home</a></li>
 							<li><a href="{{route('user.dashboard')}}">About Us</a></li>
 							<li><a href="{{route('profile.edit')}}">Car Listing</a></li>
-							<li><a href="page.php?type=faqs">FAQs</a></li>
+							<li><a href="{{route('details')}}">FAQs</a></li>
 							<li><a href="contact-us.php">Contact Us</a></li>
 						</ul>
 					</div>

@@ -297,26 +297,26 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
     padding: 10px 0;
     z-index: 2000; /* Assurez-vous que le z-index est supérieur à celui des autres éléments pour qu'il soit au premier plan */
 }
-.default-header {
+/* .default-header {
     background: #fff none repeat scroll 0 0;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px 0; /* Réduire la hauteur en ajustant les valeurs de padding */
-    transition-duration:0.3s;
+    padding: 10px 0; Réduire la hauteur en ajustant les valeurs de padding */
+    /* transition-duration:0.3s;
      -moz-transition-duration:0.3s;
       -o-transition-duration:0.3s;
        -webkit-transition-duration:0.3s;
        -ms-transition-duration:0.3s;
        align-items: center;
-  }
+  } */
 
 
-  .nav-stacked.affix {
+  /* .nav-stacked.affix {
     background: #f5f5f5 none repeat scroll 0 0;
     top: 0;
     width: 100%;
     z-index: 11;
     padding: 10px 0;
-  }
+  } */
   .logo {
     float:left;
   }
@@ -359,7 +359,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
   .circle_icon {
     border: 1px solid #000;
     border-radius: 50%;
-    color: #555;
+    border-color: #c74a07;
+    color: #f80606;
     float: left;
     font-size: 17px;
     height: 40px;
@@ -370,15 +371,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
   }
   .uppercase_text {
     color: #111;
-    font-size: 13px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 700;
     line-height: 17px;
     margin: 0;
     text-transform: uppercase;
   }
   .header_widgets {
     display: inline-block;
-    width: 260px;
+    width: 280px;
     text-align:left;
   }
   .header_widgets a {
@@ -488,6 +489,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
     position: fixed;
     top: 65px;
     width: 100%;
+    /* height: 10%; */
     z-index: 1000; /* Assurez-vous que le z-index est supérieur à tout autre élément pour qu'il soit visible */
   }
   #navigation {
@@ -1401,17 +1403,17 @@ blockquote {
    */
   
 
-   .default-header {
+   /* .default-header {
     background: #fff none repeat scroll 0 0;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px 0; /* Réduire la hauteur en ajustant les valeurs de padding */
-    transition-duration:0.3s;
+    padding: 10px 0; Réduire la hauteur en ajustant les valeurs de padding */
+    /* transition-duration:0.3s;
      -moz-transition-duration:0.3s;
       -o-transition-duration:0.3s;
        -webkit-transition-duration:0.3s; 
        -ms-transition-duration:0.3s;
        align-items: center;
-  } 
+  }  */
   /*banner */
   #banner {
     background-image: url("../images/banner-image.jpg");
@@ -1419,7 +1421,7 @@ blockquote {
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 0;
-    height:600px ;
+    height:790px ;
     width: 100%;
     z-index: 1;
   }
@@ -1427,17 +1429,18 @@ blockquote {
 
   .banner_content {
 	padding:0px;
+    width: 600px;
 }
 .banner_content {
     padding-left: 120px;
-    margin-top: 200px;
-    margin-left: 70px;
+    margin-top: 250px;
+    margin-left: 100px;
   }
   .banner_content h1 {
     color: #ffffff;
-    font-size: 40px;
-    font-weight: 50px;
-    line-height: 50px;
+    font-size: 50px;
+    font-weight: 10px;
+    /* line-height: 50px;*/
     text-transform: uppercase;
   }
   .banner_content p {
@@ -1455,18 +1458,19 @@ blockquote {
 .btn1 {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    width: 200px;
+    background-color: #e36409;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 3px;
     position: relative;
     overflow: hidden;
     transition: all 0.3s;
 }
 
-.btn1 {
+/* .btn1 {
     display: inline-block;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -1475,10 +1479,11 @@ blockquote {
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
-}
+} */
 
 .btn1:hover {
-    background-color: #45a049;
+    background-color: #180a01;
+    color: white;
 }
 
 .btn1 .angle_arrow {

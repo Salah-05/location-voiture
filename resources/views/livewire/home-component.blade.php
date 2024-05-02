@@ -1,17 +1,17 @@
     <!-- Banners -->
 <section id="banner" class="banner-section">
-    <div class="container">
+     <div class="container">
       <div class="div_zindex">
         <div class="row">
           <div class="col-md-5 col-md-push-7">
             <div class="banner_content">
-              <h1>Find the right car for you.</h1>
-              <p>We have more than a thousand cars for you to choose. </p>
+              <h1>Find the right <br/>car for you.</h1>
+              <p>We have more than a thousand cars<br/> for you to choose. </p>
               <a href="#" class="btn1">Read More <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a></div>
           </div>
         </div>
       </div>
-    </div>
+     </div>
   </section>
   <!-- /Banners --> 
   
@@ -136,6 +136,10 @@
 <!--service start -->
 <section id="service" class="service">
     <div class="container">
+        <div class="section-header">
+            <p>See <span>Our</span> </p>
+            <h2>Latest Services</h2>
+        </div><!--/.section-header-->
         <div class="service-content">
             <div class="row">
                 <div class="col-md-4 col-sm-6">
