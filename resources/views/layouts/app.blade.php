@@ -313,6 +313,39 @@
 		});
 		</script> --}}
 
+
+
+		<!-- Vendor JS-->
+<script src="{{asset('assets/js2/vendor/modernizr-3.6.0.min.js')}}"></script>
+<script src="{{asset('assets/js2/vendor/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('assets/js2/vendor/jquery-migrate-3.3.0.min.js')}}"></script>
+<script src="{{asset('assets/js2/vendor/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/slick.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery.syotimer.min.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/wow.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery-ui.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/perfect-scrollbar.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/magnific-popup.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/select2.min.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/waypoints.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/counterup.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery.countdown.min.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/images-loaded.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/isotope.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/scrollup.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery.vticker-min.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery.theia.sticky.js')}}"></script>
+<script src="{{asset('assets/js2/plugins/jquery.elevatezoom.js')}}"></script>
+<!-- Template  JS -->
+<script src="{{asset('assets/js/main.js?v=3.3')}}"></script>
+<script src="{{asset('assets/js/shop.js?v=3.3')}}"></script>
+
+
+
+
+
+
+
 		<script>
 			// Attend que le document soit prêt
 			document.addEventListener("DOMContentLoaded", function() {
