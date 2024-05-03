@@ -162,8 +162,9 @@
 						<ul class="nav navbar-nav">
 							<li><a href="{{route('home.index')}}">Home</a></li>
 							<li><a href="{{route('user.dashboard')}}">About Us</a></li>
-							<li><a href="{{route('profile.edit')}}">Car Listing</a></li>
-							<li><a href="{{route('details')}}">FAQs</a></li>
+							<li><a href="{{route('details')}}">Car Listing</a></li>
+							<li><a href="{{route('profile.edit')}}">FAQs</a></li>
+							<li><a href="contact-us.php">Contact Us</a></li>
 							<li><a href="contact-us.php">Contact Us</a></li>
 						</ul>
 					</div>
