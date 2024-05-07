@@ -14,7 +14,7 @@
 		<link href="{{asset('https://fonts.googleapis.com/css?family=Rufina:400,700')}}" rel="stylesheet">
         
         <!-- title of site -->
-        <title>Primax</title>
+        <title>Allo Car Maroc</title>
 
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="{{asset('assets/logo/favicon.png')}}"/>
@@ -46,9 +46,18 @@
 
 		 <!--main.css-->
 		 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+
+		 <!--main2.css-->
+		 <link rel="stylesheet" href="{{asset('assets/css/main2.css')}}">
+
+		 <!--detailscar.css-->
+		 <link rel="stylesheet" href="{{asset('assets/css/detailscar.css')}}">
         
         <!--responsive.css-->
         <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
 
         @livewireStyles
@@ -170,6 +179,8 @@
 					</div>
 				</div>
 			</nav>
+
+			
 			<!-- Navigation end -->
 			
 		</header>
@@ -188,7 +199,7 @@
 						<div class="col-md-3 col-sm-6">
 							<div class="single-footer-widget">
 								<div class="footer-logo">
-									<a href="index.html">Online Car Rental</a>
+									<a href="index.html">Allo Car</br> Maroc</a>
 								</div>
 								<p>
 									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
@@ -338,8 +349,8 @@
 <script src="{{asset('assets/js2/plugins/jquery.theia.sticky.js')}}"></script>
 <script src="{{asset('assets/js2/plugins/jquery.elevatezoom.js')}}"></script>
 <!-- Template  JS -->
-<script src="{{asset('assets/js/main.js?v=3.3')}}"></script>
-<script src="{{asset('assets/js/shop.js?v=3.3')}}"></script>
+<script src="{{asset('assets/js2/main.js?v=3.3')}}"></script>
+<script src="{{asset('assets/js2/shop.js?v=3.3')}}"></script>
 
 
 
@@ -369,6 +380,10 @@
 });
 
 		</script>
+
+
+       
+
 
 
         @livewireScripts

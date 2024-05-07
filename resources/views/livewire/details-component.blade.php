@@ -14,7 +14,7 @@
                     <div class="col-lg-9">
                         <div class="shop-product-fillter">
                             <div class="totall-product">
-                                <p> We found <strong class="text-brand">688</strong> items for you!</p>
+                                <p> We found <strong class="text-brand">{{$voitures->total()}}</strong> items for you!</p>
                             </div>
                             <div class="sort-by-product-area">
                                 <div class="sort-by-cover mr-10">
@@ -23,16 +23,15 @@
                                             <span><i class="fi-rs-apps"></i>Show:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> 50 <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> {{$pageSize}} <i class="fas fa-angle-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
                                         <ul>
-                                            <li><a class="active" href="#">50</a></li>
-                                            <li><a href="#">100</a></li>
-                                            <li><a href="#">150</a></li>
-                                            <li><a href="#">200</a></li>
-                                            <li><a href="#">All</a></li>
+                                            <li><a class="{{ $pageSize==12 ? 'active': ''}}" href="#" wire:click.prevent="changePageSize(12)">12</a></li>
+                                            <li><a class="{{ $pageSize==15 ? 'active': ''}}" href="#" wire:click.prevent="changePageSize(15)">15</a></li>
+                                            <li><a class="{{ $pageSize==25 ? 'active': ''}}" href="#" wire:click.prevent="changePageSize(25)">25</a></li>
+                                            <li><a class="{{ $pageSize==32 ? 'active': ''}}" href="#" wire:click.prevent="changePageSize(32)">32</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -42,16 +41,15 @@
                                             <span><i class="fi-rs-apps-sort"></i>Sort by:</span>
                                         </div>
                                         <div class="sort-by-dropdown-wrap">
-                                            <span> Featured <i class="fi-rs-angle-small-down"></i></span>
+                                            <span> {{$orderBy}} <i class="fas fa-angle-down"></i></span>
                                         </div>
                                     </div>
                                     <div class="sort-by-dropdown">
                                         <ul>
-                                            <li><a class="active" href="#">Featured</a></li>
-                                            <li><a href="#">Price: Low to High</a></li>
-                                            <li><a href="#">Price: High to Low</a></li>
-                                            <li><a href="#">Release Date</a></li>
-                                            <li><a href="#">Avg. Rating</a></li>
+                                            <li><a class="{{ $orderBy=='Default Sorting' ? 'active': ''}}" href="#" wire:click.prevent="changeOrderBy('Default Sorting')">Default Sorting</a></li>
+                                            <li><a class="{{ $orderBy=='Price: Low to High' ? 'active': ''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a></li>
+                                            <li><a class="{{ $orderBy=='Price: High to Low' ? 'active': ''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a></li>
+                                            <li><a class="{{ $orderBy=='Sort By Newness' ? 'active': ''}}" href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">Sort By Newness</a></li>                                     
                                         </ul>
                                     </div>
                                 </div>
@@ -63,7 +61,7 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
+                                            <a href="{{route('car.details',['slug'=>$voiture->slug])}}">
                                                 <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$voiture->id}}.png" alt="{{$voiture->name}}">
                                                 {{-- <img class="hover-img" src="{{asset('assets/imgs/shop/product-3-1.jpg')}}" alt=""> --}}
                                             </a>
@@ -124,13 +122,9 @@
                         <div class="widget-category mb-30">
                             <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
                             <ul class="categories">
-                                <li><a href="shop.html">Voitures économiques</a></li>
-                                <li><a href="shop.html">Véhicules utilitaires</a></li>
-                                <li><a href="shop.html">Voitures de luxe </a></li>
-                                <li><a href="shop.html">Swimwear</a></li>
-                                <li><a href="shop.html">Véhicules tout-terrain</a></li>
-                                <li><a href="shop.html">Voitures familiales</a></li>
-                                <li><a href="shop.html">Voitures écologiques</a></li>
+                            @foreach($categories as $category)
+                                 <li><a href="{{route('voiture.category',['slug'=>$category->slug])}}">{{$category->name}}</a></li></br>
+                            @endforeach
                             </ul>
                         </div>
                         <!-- Fillter By Price -->
@@ -183,42 +177,20 @@
                                 <h5 class="widget-title mb-10">New products</h5>
                                 <div class="bt-1 border-color-1"></div>
                             </div>
+                            @foreach($nvoitures as $nvoiture)
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/product-7-1.png')}}" alt="#">
+                                    <img src="{{asset('assets/imgs/shop/product-')}}{{$nvoiture->id}}.png" alt="">
                                 </div>
                                 <div class="content pt-10">
-                                    <h5><a href="product-details.html">Chen Cardigan</a></h5>
-                                    <p class="price mb-0 mt-5">$99.50</p>
+                                    <h5><a href="{{route('car.details',['slug'=>$nvoiture->slug])}}">{{$nvoiture->name}}</a></h5>
+                                    <p class="price mb-0 mt-5">{{$nvoiture->regular_price}}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:90%"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-post clearfix">
-                                <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/product-7-1.png')}}" alt="#">
-                                </div>
-                                <div class="content pt-10">
-                                    <h6><a href="product-details.html">Chen Sweater</a></h6>
-                                    <p class="price mb-0 mt-5">$89.50</p>
-                                    <div class="product-rate">
-                                        <div class="product-rating" style="width:80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post clearfix">
-                                <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/product-7-1.png')}}" alt="#">
-                                </div>
-                                <div class="content pt-10">
-                                    <h6><a href="product-details.html">Colorful Jacket</a></h6>
-                                    <p class="price mb-0 mt-5">$25</p>
-                                    <div class="product-rate">
-                                        <div class="product-rating" style="width:60%"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
                             <img src="{{asset('assets/imgs/banner/banner-11.jpg')}}" alt="">
