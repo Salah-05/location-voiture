@@ -1,0 +1,193 @@
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+.mdi--account {
+    display: inline-block;
+    width: 1em;
+    height: 0.9em;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4'/%3E%3C/svg%3E");
+  }
+  .espace-voiture{
+    padding-right: 20px;
+  }
+  .espace-voiture2{
+    padding-right: 33px;
+  }
+  .icon-kilometrage{
+    padding-top: 2px;
+  }
+
+
+  /* page details car */
+
+  .tab-style3 .nav-tabs .nav-item a.active {
+    border-bottom-color: #F15412;
+    color: #F15412;
+  }
+  
+  .tab-style3 .nav-tabs li.nav-item a {
+    background-color: transparent;
+    display: block;
+    padding: .5rem 1rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+  
+  .tab-content.shop_info_tab {
+    margin-top: 40px;
+  }
+  
+  .tab-pane .comments-area {
+    padding-top: 0;
+    border: 0;
+  }
+  
+  .product-color-red {
+    background: #ff596d;
+  }
+  
+  .product-color-yellow {
+    background: #ffdb33;
+  }
+  
+  .product-color-white {
+    background: #ffffff;
+  }
+  
+  .product-color-orange {
+    background: #ffbb51;
+  }
+  
+  .product-color-cyan {
+    background: #80e6ff;
+  }
+  
+  .product-color-green {
+    background: #38cf46;
+  }
+  
+  .product-color-purple {
+    background: #ff8ff8;
+  }
+  
+  .detail-gallery .slick-slider {
+    background-color: #000;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  .detail-gallery .slick-slider img {
+    opacity: 0.96;
+  }
+  
+  .detail-gallery .slick-slider.slider-nav-thumbnails {
+    background: none;
+    border-radius: 0;
+  }
+  
+  .detail-gallery .slick-slider button.slick-arrow {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  .detail-gallery .slick-slider button.slick-arrow i {
+    color: #90908e;
+  }
+  
+  .mail-to-friend {
+    color: #90908e;
+    font-size: 12px;
+  }
+  
+  .mail-to-friend i {
+    margin-right: 5px;
+  }
+  
+  .attr-color, .attr-size {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .product-detail-rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .product-detail .section-title.style-1 {
+    font-size: 22px;
+  }
+  
+  .product-more-infor {
+    padding: 0 0 0px 14px;
+  }
+  
+  .product-more-infor li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 10px;
+    position: relative;
+  }
+  
+  .product-more-infor li ::before {
+    position: absolute;
+    left: -14px;
+    top: 9px;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: #9b9b9b;
+  }
+  
+  .product-more-infor li span {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 165px;
+    flex: 0 0 165px;
+    display: inline-block;
+  }
+  
+  .product-more-infor li:last-child {
+    margin: 0 0 0;
+  }
+  
+  .progress + .progress {
+    margin-top: 1rem;
+  }
+  
+  .progress span {
+    line-height: 16px;
+    background: #fff;
+    padding-right: 10px;
+    width: 45px;
+  }
+  
+  .progress-bar {
+    background-color: #F15412;
+  }
+
+
+  

@@ -497,7 +497,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list-group">
+                            {{-- <div class="list-group">
                                 <div class="list-group-item mb-10 mt-10">
                                     <label class="fw-900">Color</label>
                                     <div class="custome-checkbox">
@@ -522,8 +522,8 @@
                                         <label class="form-check-label" for="exampleCheckbox31"><span>Used (45)</span></label>
                                     </div>
                                 </div>
-                            </div>
-                            <a href="shop.html" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a>
+                            </div> --}}
+                            {{-- <a href="shop.html" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a> --}}
                         </div>
                         <!-- Product sidebar Widget -->
                         <div class="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
@@ -556,3 +556,10 @@
         </section>
     </main>
 </div>
+<!-- Inclure jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Inclure Bootstrap JS (popper.js est nécessaire pour les fonctionnalités dropdown de Bootstrap) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

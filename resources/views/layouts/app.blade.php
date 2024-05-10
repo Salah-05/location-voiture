@@ -126,22 +126,42 @@
 					<div class="header_wrap">
 						<div class="user_login">
 							@auth
-							<ul>
-								<li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-									<ul class="dropdown-menu">
-										<li><a href="{{route('profile.edit')}}">Profile Settings</a></li>
-										<li><a href="{{route('profile.edit')}}">Update Password</a></li>
-										<li><a href="my-booking.php">My Booking</a></li>
-										<li><a href="post-testimonial.php">Post a Testimonial</a></li>
-										<li><a href="my-testimonials.php">My Testimonial</a></li>
-										<li><form method="POST" action="{{route('logout')}}">
+							    @if(Auth::user()->utype == 'ADM')
+							        <ul>
+								        <li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									        <ul class="dropdown-menu">
+										        <li><a href="{{route('admin.categories')}}">Admin Dashboard</a></li>
+										        <li><a href="{{route('profile.edit')}}">Profile Settings</a></li>
+										        <li><a href="{{route('profile.edit')}}">Update Password</a></li>
+										        <li><a href="my-booking.php">My Booking</a></li>
+										        <li><a href="post-testimonial.php">Post a Testimonial</a></li>
+										        <li><a href="my-testimonials.php">My Testimonial</a></li>
+										        <li><form method="POST" action="{{route('logout')}}">
+											    @csrf
+											    <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">Sign Out</a>
+										        </form>
+										        </li>
+									        </ul>
+								        </li>
+							        </ul>
+							    @else
+							        <ul>
+								        <li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> {{Auth::user()->name}} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									    <ul class="dropdown-menu">
+										    <li><a href="{{route('profile.edit')}}">Profile Settings</a></li>
+										    <li><a href="{{route('profile.edit')}}">Update Password</a></li>
+										    <li><a href="my-booking.php">My Booking</a></li>
+										    <li><a href="post-testimonial.php">Post a Testimonial</a></li>
+										    <li><a href="my-testimonials.php">My Testimonial</a></li>
+										    <li><form method="POST" action="{{route('logout')}}">
 											@csrf
 											<a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit()">Sign Out</a>
-										</form>
-										</li>
-									</ul>
-								</li>
-							</ul>
+										    </form>
+										    </li>
+									    </ul>
+								        </li>
+							        </ul>
+								@endif
 							@else
 							<ul>
 								<li class="dropdown"> <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i><i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -387,6 +407,7 @@
 
 
         @livewireScripts
+		@stack('scripts')
         
     </body>
 	

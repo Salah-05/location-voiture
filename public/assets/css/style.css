@@ -273,7 +273,12 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
 	 2. Header
 ===========================*/
 
- .default-header {
+.main-content{
+    position: relative;
+
+}
+
+.default-header {
     background: #fff none repeat scroll 0 0;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
     padding: 30px 0;
@@ -893,7 +898,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;} */ */
         12. Contact
 --------------------------------------*/
 .contact {
-    background: #2a2d54;
+    background: #090909;
 }
 .footer-top {padding: 112px 0 72px;}
 
@@ -1416,7 +1421,7 @@ blockquote {
   }  */
   /*banner */
   #banner {
-    background-image: url("../images/banner-image.jpg");
+    background-image: url("../images/bannner-image5.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1429,12 +1434,12 @@ blockquote {
 
   .banner_content {
 	padding:0px;
-    width: 600px;
+    width: 500px;
 }
 .banner_content {
     padding-left: 120px;
     margin-top: 250px;
-    margin-left: 100px;
+    margin-right: 500px !important;
   }
   .banner_content h1 {
     color: #ffffff;
@@ -1498,7 +1503,7 @@ blockquote {
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 0px;
 } 
 
 /* Conteneur principal */
@@ -1630,6 +1635,8 @@ hr {
 
 
 /* END of Formulaire de connexion */
+
+
 
 
 
